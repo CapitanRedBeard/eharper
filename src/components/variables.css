@@ -6,14 +6,14 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE.txt file in the root directory of this source tree.
  */
- @import url(http://fonts.googleapis.com/css?family=Open+Sans:400);
+ @import url(https://fonts.googleapis.com/css?family=Maven+Pro:400,500);
 
 :root {
   /*
    * Typography
    * ======================================================================== */
 
-  --font-family-base: 'Open Sans', 'Segoe UI', 'HelveticaNeue-Light', sans-serif;
+  --font-family-base: 'Maven Pro', 'Segoe UI', 'HelveticaNeue-Light', sans-serif;
   --main-color: #151E45;
   --sub-color: #999fb5;
   /*--color-base: '#151E45';*/

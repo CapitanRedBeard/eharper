@@ -52,19 +52,3 @@
     color: var(--main-color);
     text-shadow: 10px 0 var(--main-color), -10px 0 var(--main-color);
 }
-
-.highlight {
-  margin-right: 8px;
-  margin-left: 8px;
-  border-radius: 3px;
-  background: rgba(0, 0, 0, 0.15);
-  color: #fff;
-}
-
-.highlight:hover {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.spacer {
-  color: rgba(255, 255, 255, 0.3);
-}

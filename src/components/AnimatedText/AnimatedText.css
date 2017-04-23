@@ -1,8 +1,9 @@
 /* Main styles */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+@import url(https://fonts.googleapis.com/css?family=Maven+Pro:900);
+@import '../variables.css';
 
 .root {
-  background-image: -webkit-linear-gradient(crimson 50%, transparent 50%);
+  background-image: -webkit-linear-gradient(var(--sub-color) 50%, transparent 50%);
   background-repeat: repeat;
   background-position: 0 0;
   background-size: 100% 50px;
@@ -31,5 +32,5 @@
   white-space: nowrap;
   text-align: center;
   text-transform: uppercase;
-  font: bold 24vmax/.8 Open Sans, Impact;
+  font: bold 24vmax/.8 Maven Pro, Impact;
 }

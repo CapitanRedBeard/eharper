@@ -18,10 +18,12 @@ class Header extends React.Component {
   render() {
     return (
       <div className={s.root}>
-        <div className={s.container}>
-          <AnimatedText text="Beardo" />
-          <h2 className={s.subtitle}>{'keep the internet weird'.toUpperCase()}</h2>
-        </div>
+        <Link to="/">
+          <div className={s.container}>
+            <AnimatedText text="Beardo" />
+            <h2 className={s.subtitle}>{'keep the internet weird'.toUpperCase()}</h2>
+          </div>
+        </Link>
         <Navigation/>
       </div>
     );
