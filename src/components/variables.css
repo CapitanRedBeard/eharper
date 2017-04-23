@@ -6,13 +6,14 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE.txt file in the root directory of this source tree.
  */
+ @import url(http://fonts.googleapis.com/css?family=Open+Sans:400);
 
 :root {
   /*
    * Typography
    * ======================================================================== */
 
-  --font-family-base: 'Segoe UI', 'HelveticaNeue-Light', sans-serif;
+  --font-family-base: 'Open Sans', 'Segoe UI', 'HelveticaNeue-Light', sans-serif;
 
   /*
    * Layout

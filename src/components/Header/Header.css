@@ -21,9 +21,15 @@
   margin: 0 auto;
   padding: 20px 0;
   /*max-width: var(--max-content-width);*/
-  background-image: url('./hero-image.jpg');
+  /*background-image: url('./hero-image.jpg');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center;*/
+  background-color: black
+}
+
+.subtitle {
+  text-align: center;
+  font-family: var(--font-family-base)
 }
 
 .brand {
