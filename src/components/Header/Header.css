@@ -9,10 +9,6 @@
 
 @import '../variables.css';
 
-:root {
-  --brand-color: #61dafb;
-}
-
 .root {
   color: #fff;
 }
@@ -24,39 +20,11 @@
   /*background-image: url('./hero-image.jpg');
   background-repeat: no-repeat;
   background-position: center;*/
-  background-color: black
+  background-color: var(--main-color);
 }
 
 .subtitle {
   text-align: center;
-  font-family: var(--font-family-base)
-}
-
-.brand {
-  color: color(var(--brand-color) lightness(+10%));
-  text-decoration: none;
-  font-size: 1.75em; /* ~28px */
-}
-
-.brandTxt {
-  margin-left: 10px;
-}
-
-.banner {
-  text-align: center;
-}
-
-.bannerTitle {
-  margin: 0;
-  padding: 10px;
-  font-weight: normal;
-  font-size: 4em;
-  line-height: 1em;
-}
-
-.bannerDesc {
-  padding: 0;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 1.25em;
-  margin: 0;
+  color: var(--sub-color);
+  font-family: var(--font-family-base);
 }

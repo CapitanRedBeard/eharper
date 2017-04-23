@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
 
 .root {
-  background-image: -webkit-linear-gradient(crimson 50%, white 50%);
+  background-image: -webkit-linear-gradient(crimson 50%, transparent 50%);
   background-repeat: repeat;
   background-position: 0 0;
   background-size: 100% 50px;

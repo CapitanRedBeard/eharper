@@ -6,27 +6,51 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE.txt file in the root directory of this source tree.
  */
+ @import '../variables.css';
 
 .root {
-  float: right;
+  /*float: right;*/
   margin: 6px 0 0;
+  text-align: center
+
 }
 
 .link {
+  position: relative;
   display: inline-block;
-  padding: 3px 8px;
+  margin: 15px 25px;
+  outline: 1;
+  color: var(--main-color);
   text-decoration: none;
-  font-size: 1.125em; /* ~18px */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  font-size: 1.35em;
 }
 
-.link,
+/*.link,
 .link:active,
 .link:visited {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--main-color)
+}*/
+.link::before {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    color: transparent;
+    content: "•";
+    text-shadow: transparent 0px 0px;
+    font-size: 1.2em;
+    transform: translateX(-50%);
+    pointer-events: none;
+    transition: text-shadow 0.3s, color 0.3s;
 }
 
-.link:hover {
-  color: rgba(255, 255, 255, 1);
+.link:hover::before, 
+.link:active::before {
+    color: var(--main-color);
+    text-shadow: 10px 0 var(--main-color), -10px 0 var(--main-color);
 }
 
 .highlight {

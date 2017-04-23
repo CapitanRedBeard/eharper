@@ -14,7 +14,12 @@
    * ======================================================================== */
 
   --font-family-base: 'Open Sans', 'Segoe UI', 'HelveticaNeue-Light', sans-serif;
-
+  --main-color: #151E45;
+  --sub-color: #999fb5;
+  /*--color-base: '#151E45';*/
+  /*--color-base: 'red';
+  --text-color: 'red';
+  --text-color-base: 'red';*/
   /*
    * Layout
    * ======================================================================== */
