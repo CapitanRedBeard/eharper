@@ -47,7 +47,7 @@
     transition: text-shadow 0.3s, color 0.3s;
 }
 
-.link:hover::before, 
+.link:hover::before,
 .link:active::before {
     color: var(--main-color);
     text-shadow: 10px 0 var(--main-color), -10px 0 var(--main-color);

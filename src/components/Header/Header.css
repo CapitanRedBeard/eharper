@@ -27,4 +27,25 @@
   text-align: center;
   color: var(--sub-color);
   font-family: var(--font-family-base);
+  z-index: 1;
+  display: block;
+  padding: 8px 0 0 0;
+  text-shadow: none;
+  text-transform: none;
+  font-style: italic;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.root:hover .subtitle,
+.root:focus .subtitle {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    transform: translateY(0%);
 }

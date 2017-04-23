@@ -20,7 +20,7 @@ class Header extends React.Component {
       <div className={s.root}>
         <div className={s.container}>
           <AnimatedText text="Beardo" />
-          <h2 className={s.subtitle}>keep make the internet weird</h2>
+          <h2 className={s.subtitle}>{'keep the internet weird'.toUpperCase()}</h2>
         </div>
         <Navigation/>
       </div>
