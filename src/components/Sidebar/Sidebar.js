@@ -23,11 +23,9 @@ class Sidebar extends React.Component {
           <div className={s.imageWrapper}>
             <img src={emmettSrc} alt="Emmett Harper" />
           </div>
-          <div className={s.info}>
-            <h3 className={s.name}>Emmett Harper</h3>
-            <p className={s.description}>I build web and mobile apps. Catch me at the beach with my bulldog Gus</p>
-            <p className={s.location}>San Diego, CA</p>
-          </div>
+          <h3 className={s.name}>Emmett Harper</h3>
+          <p className={s.description}>I build web and mobile apps. Catch me at the beach with my bulldog Gus</p>
+          <p className={s.location}>San Diego, CA</p>
           <div className={s.socials}>
             <a href='https://github.com/CapitanRedBeard'>
               <img src={githubSrc} alt="github - CapitanRedBeard, https://github.com/CapitanRedBeard"/>

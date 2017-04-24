@@ -48,7 +48,8 @@
 }
 
 .link:hover::before,
-.link:active::before {
+.link:active::before,
+.link:focus::before {
     color: var(--main-color);
     text-shadow: 10px 0 var(--main-color), -10px 0 var(--main-color);
 }
