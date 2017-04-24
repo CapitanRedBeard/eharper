@@ -51,6 +51,14 @@ class App extends React.PureComponent {
     return this.props.context;
   }
 
+  componentDidMount() {
+    console.log("mounted");
+
+    const element = document.getElementById('app-root');
+    element.style.opacity = "1";
+    element.style.filter  = 'alpha(opacity=100)'; // IE fallback
+  }
+
   render() {
     // NOTE: If you need to add or modify header, footer etc. of the app,
     // please do that inside the Layout component.

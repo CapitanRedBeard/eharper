@@ -31,7 +31,7 @@ class Html extends React.Component {
   render() {
     const { title, description, styles, scripts, children } = this.props;
     return (
-      <html className="no-js" lang="en">
+      <html id="app-root" className="no-js" lang="en">
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />

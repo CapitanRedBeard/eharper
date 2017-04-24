@@ -11,31 +11,29 @@ import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Sidebar.css';
 import Link from '../Link';
-import emmettUrl from './emmett-small.jpg';
-import FontAwesome from 'react-fontawesome';
+import emmettSrc from './emmett-small.jpg';
+import githubSrc from './github.svg';
+import linkedinSrc from './linkedin.svg';
 
-
-class Footer extends React.Component {
+class Sidebar extends React.Component {
   render() {
     return (
       <div className={s.root}>
         <div className={s.container}>
           <div className={s.imageWrapper}>
-            <img src={emmettUrl} alt="Emmett Harper" />
+            <img src={emmettSrc} alt="Emmett Harper" />
           </div>
           <div className={s.info}>
             <h3 className={s.name}>Emmett Harper</h3>
-            <p className={s.description}>I build web and mobile apps. Catch me by the beach with my bulldog Gus and some mexican food.</p>
-            <h5 className={s.location}>San Diego, CA</h5>
-            <FontAwesome name='square-o' stack='2x' />
-
+            <p className={s.description}>I build web and mobile apps. Catch me at the beach with my bulldog Gus</p>
+            <p className={s.location}>San Diego, CA</p>
           </div>
           <div className={s.socials}>
-            <a href="url">
-              <FontAwesome className={s.github} name='rocket'/>
+            <a href='https://github.com/CapitanRedBeard'>
+              <img src={githubSrc} alt="github - CapitanRedBeard, https://github.com/CapitanRedBeard"/>
             </a>
-            <a href="url">
-              <FontAwesome className={s.linkedin} name='rocket'/>
+            <a href='https://www.linkedin.com/in/emmettharper/'>
+              <img src={linkedinSrc} alt="linkedin - Emmett Harper, https://www.linkedin.com/in/emmettharper/"/>
             </a>
           </div>
         </div>
@@ -44,4 +42,4 @@ class Footer extends React.Component {
   }
 }
 
-export default withStyles(s)(Footer);
+export default withStyles(s)(Sidebar);

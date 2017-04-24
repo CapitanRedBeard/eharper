@@ -21,7 +21,6 @@ export default {
     require('./posts').default,
     require('./projects').default,
     require('./talks').default,
-    require('./privacy').default,
 
     // Wildcard routes, e.g. { path: '*', ... } (must go last)
     require('./notFound').default,
@@ -32,7 +31,7 @@ export default {
     const route = await next();
 
     // Provide default values for title, description etc.
-    route.title = `${route.title || 'Untitled Page'} - www.reactstarterkit.com`;
+    route.title = `beardo.io - ${route.title || 'Untitled Page'}`;
     route.description = route.description || '';
 
     return route;
