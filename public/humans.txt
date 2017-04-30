@@ -3,11 +3,8 @@
 
 # TEAM
 
-  <name> -- <role> -- <twitter>
+Emmett -- Software Developer
 
-# THANKS
-
-  <name>
 
 # TECHNOLOGY COLOPHON
 

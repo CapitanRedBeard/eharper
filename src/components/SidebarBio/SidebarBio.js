@@ -9,13 +9,13 @@
 
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Sidebar.css';
+import s from './SidebarBio.css';
 import Link from '../Link';
 import emmettSrc from './emmett-small.jpg';
 import githubSrc from './github.svg';
 import linkedinSrc from './linkedin.svg';
 
-class Sidebar extends React.Component {
+class SidebarBio extends React.Component {
   render() {
     return (
       <div className={s.root}>
@@ -40,4 +40,4 @@ class Sidebar extends React.Component {
   }
 }
 
-export default withStyles(s)(Sidebar);
+export default withStyles(s)(SidebarBio);

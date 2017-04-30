@@ -10,10 +10,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Page.css';
+import s from './PageList.css';
 import SidebarBio from '../SidebarBio/SidebarBio';
 
-class Page extends React.Component {
+class PageList extends React.Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     html: PropTypes.string.isRequired,
@@ -21,7 +21,8 @@ class Page extends React.Component {
 
   render() {
     const { title, html } = this.props;
-    
+    console.log("Props: ", this.props);
+
     return (
       <div className={s.root}>
         <SidebarBio />
@@ -37,4 +38,4 @@ class Page extends React.Component {
   }
 }
 
-export default withStyles(s)(Page);
+export default withStyles(s)(PageList);

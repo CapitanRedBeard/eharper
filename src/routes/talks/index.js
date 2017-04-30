@@ -1,28 +1,36 @@
-/**
- * React Starter Kit (https://www.reactstarterkit.com/)
- *
- * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
+
 
 import React from 'react';
 import Layout from '../../components/Layout';
-import Page from '../../components/Page';
+import PageList from '../../components/PageList';
 
+const localdir = './_talks/'
+const mdFiles = [
+  'talk1.md',
+  'talk2.md'
+]
 export default {
 
   path: '/talks',
 
   async action() {
-    const data = await require.ensure([], require => require('./talks.md'), 'talks');
 
-    return {
-      title: data.title,
-      chunk: 'talks',
-      component: <Layout><Page {...data} /></Layout>,
-    };
-  },
+    const promises = mdFiles.map((file) => {
+      return require.ensure([], require => require(`${localdir}${file}`), 'talks')
+    });
 
+    // fs.readdir( localdir, ( err, files ) => {
+    //   console.log("files", files);
+    // });
+    return await Promise.all(promises).then(items => {
+      console.log(items);
+      return {
+        title: 'Talks',
+        chunk: 'talks',
+        component: <Layout><PageList items={items} /></Layout>,
+      };
+    }).catch(reason => {
+      console.warn(reason)
+    });
+  }
 };
