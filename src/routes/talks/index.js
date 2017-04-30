@@ -1,12 +1,11 @@
-
-
 import React from 'react';
 import Layout from '../../components/Layout';
 import PageList from '../../components/PageList';
+import Page from '../../components/Page';
 
 const localdir = './_talks/'
 const mdFiles = [
-  'talk1.md',
+  'react-native-animations.md',
   'talk2.md'
 ]
 export default {
@@ -19,11 +18,10 @@ export default {
       return require.ensure([], require => require(`${localdir}${file}`), 'talks')
     });
 
-    // fs.readdir( localdir, ( err, files ) => {
-    //   console.log("files", files);
-    // });
+    fetch('/talks')
+    // fetch('/talks').then((response) => console.log("response: ", response));
+
     return await Promise.all(promises).then(items => {
-      console.log(items);
       return {
         title: 'Talks',
         chunk: 'talks',
@@ -32,5 +30,22 @@ export default {
     }).catch(reason => {
       console.warn(reason)
     });
+  }
+};
+
+export const talk = {
+
+  path: '/talks/:talkId',
+
+  async action({params}) {
+
+    const data = await require.ensure([], require => require(`${localdir}${params.talkId}.md`), 'talks');
+
+    return {
+      title: data.title,
+      chunk: 'Talk',
+      component: <Layout><Page {...data} /></Layout>,
+    };
+
   }
 };

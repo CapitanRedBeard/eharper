@@ -21,6 +21,7 @@ export default {
     require('./posts').default,
     require('./projects').default,
     require('./talks').default,
+    require('./talks').talk,
 
     // Wildcard routes, e.g. { path: '*', ... } (must go last)
     require('./notFound').default,

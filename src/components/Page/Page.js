@@ -11,7 +11,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Page.css';
-import SidebarBio from '../SidebarBio/SidebarBio';
+import SidebarInfo from '../SidebarInfo';
 
 class Page extends React.Component {
   static propTypes = {
@@ -20,11 +20,11 @@ class Page extends React.Component {
   };
 
   render() {
-    const { title, html } = this.props;
-    
+    const { title, html, sidebar } = this.props;
+
     return (
       <div className={s.root}>
-        <SidebarBio />
+        <SidebarInfo sidebar={sidebar}/>
         <div className={s.container}>
           <h1>{title}</h1>
           <div

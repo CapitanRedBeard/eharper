@@ -1,0 +1,6 @@
+{
+  "name": "SidebarInfo",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./SidebarInfo.js"
+}

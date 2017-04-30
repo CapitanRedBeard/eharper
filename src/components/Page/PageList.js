@@ -19,6 +19,12 @@ class PageList extends React.Component {
     html: PropTypes.string.isRequired,
   };
 
+  componentDidMount() {
+     fetch('/talks') // fetch from Express.js server
+      .then(response => response.json())
+      .then(result => console.log("Yeah!", result));
+  }
+
   render() {
     const { title, html } = this.props;
     console.log("Props: ", this.props);

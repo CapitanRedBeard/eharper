@@ -13,7 +13,6 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './PageList.css';
 import SidebarBio from '../SidebarBio/SidebarBio';
 import Link from '../Link';
-import _ from 'underscore';
 
 class PageList extends React.Component {
   static propTypes = {
@@ -21,25 +20,23 @@ class PageList extends React.Component {
   };
 
   renderItems(items) {
-    return _.map(items, (item, index) => {
-        console.log("Item: ", item)
-        const {title, subtitle} = item;
-        return (
-          <div key={`item${index}`} className={s.itemContainer} >
-            <Link to='/'>
-              <h3>{title}</h3>
-              <p>{subtitle}</p>
-            </Link>
-          </div>
-        )
+    return items.map((item, index) => {
+      const {title, subtitle} = item;
+      return (
+        <div key={`item${index}`} className={s.itemContainer} >
+          <Link to='/talks/react-native-animations'>
+            <h3>{title}</h3>
+            <p>{subtitle}</p>
+          </Link>
+        </div>
+      )
     })
 
   }
 
   render() {
     const { items } = this.props;
-    console.log("Props: ", items);
-
+    console.log("Props: ", this.props)
     return (
       <div className={s.root}>
         <SidebarBio />
